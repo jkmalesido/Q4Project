@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  	<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js"></script>
+  	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+	<title>Computing Addict | Project</title>
+</head>
+<style type="text/css">
+	body{
+			background-color: #F8E9CF;
+		}
+	nav{
+			background-color: #9C7FC2;
+		}
+	a, .nav-link, p, h4, h3{
+			color: white;
+		}
+	a, .nav-link, p, h4, h3, h1, button{
+		font-family: 'Space Grotesk', sans-serif;
+	}
+	h4{
+		text-decoration: underline;
+	}
+	.btn1{
+		background-color: #CB7200;
+		color: #FFFF;
+		border-color: #CB7200;
+	}
+	.navbar{
+			position: fixed;
+			top: 0;
+		}
+	.input, .output{
+		width: 35%;
+		height: 200%;
+	}
+	.input-label, .output-label{
+		font-size: 20px;
+	}
+	.conversion{
+			border-color: #000000;
+			border-style: ridge;
+			border-width: thick;
+			padding: 6px 10px;
+			margin-top: 8px;
+			margin-left: 350px;
+			margin-right: 350px;
+			background-color: #9C7FC2;
+		}
+		.date{
+			border-color: #000000;
+			border-style: ridge;
+			border-width: thick;
+			padding: 6px 10px;
+			margin-top: 8px;
+			margin-left: 250px;
+			margin-right: 250px;
+			background-color: #9C7FC2;
+		}
+		.btn2, .btn3, .btn4{
+			background-color: #CB7200;
+			color: #FFFF;
+			border-color: #CB7200;
+			font-size: 20px;
+		}
+		.container-fluid{
+			background-color: #9C7FC2;
+		}
+</style>
+<body>
+	<nav class="navbar navbar-expand-md container-fluid"><a class="navbar-brand col-6" href="#"><img src="https://cdn.icon-icons.com/icons2/3310/PNG/512/laptop_computer_books_study_pc_icon_209270.png" height="10%" width="10%">Computing Addict</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+		<span class="navbar-toggler-icon"></span>		
+	</button>
+	<div>
+    <form>
+      <input type="text" placeholder="Type here..." name="search">
+      <button type="submit"><i class="fa fa-search">Search</i></button>
+    </form>
+  	</div>
+	<div class="collapse under navbar-collapse" id="collapsibleNavbar">
+		<ul class="navbar-nav">
+			<li class="nav-item">
+				<a href="https://www.calculator.net/sitemap.html" class="nav-link">More Calculators</a>
+			</li>
+			<li class="nav-item">
+				<a href="#" class="nav-link">About Me</a>
+			</li>
+			<li class="nav-item">
+				<button type="button" class="btn1"><img src="https://cdn.icon-icons.com/icons2/3723/PNG/512/learn_coaching_recommendation_data_reading_knowledge_icon_230463.png" height="35" width="35">Contact Me</button>
+			</li>
+		</ul>
+	</div>
+	</nav>
+	<br><br><br><br><br>
+	<center>
+		<div class="container">
+			<div class="date">
+				<center>
+					<h4>Date Today !</h4>
+					<p id="today"></p>
+					<script type="text/javascript">
+						const date = new Date();
+						document.getElementById('today').innerHTML = date;
+					</script>
+				</center>
+			</div>
+		</div>
+	</center>
+
+	<br><br>
+	<center>
+		<h1>Length Converter<img src="https://www.shareicon.net/data/2016/11/09/851203_edit_512x512.png" height="5.5%" width="5.5%"></h1>
+		<div class="conversion">
+			<p class="input-label">Input:</p>
+			<input type="number" class="input form-control" placeholder="Millimeter" name="input" id="input"><br>
+			<img src="https://cdn0.iconfinder.com/data/icons/mathematical-symbols-2-colored/640/cc_equal-512.png" width="10%">
+			<br>
+			<p class="output-label">Output:</p>
+			<input type="number" class="output form-control" name="output" id="output" disabled><br><br>
+			<button onclick="Centimeter()" class="btn2">Centimeter Conversion</button><br><br>
+			<button onclick="Meter()" class="btn3">Meter Conversion</button><br><br>
+			<button onclick="Kilometer()" class="btn4">Kilometer Conversion</button><br><br>
+		</div>
+	</center>
+
+	<script type="text/javascript">
+		function Centimeter() {
+			var input = document.getElementsByName('input')[0].value;
+			var result = (input) / 10;
+			document.getElementsByName('output')[0].value = result;
+		}
+		function Meter() {
+			var input = document.getElementsByName('input')[0].value;
+			var result = (input) / 1000;
+			document.getElementsByName('output')[0].value = result;
+		}
+		function Kilometer() {
+			var input = document.getElementsByName('input')[0].value;
+			var result = (input) / 1000000;
+			document.getElementsByName('output')[0].value= result;
+		}
+	</script>
+
+	<br><br>
+	<center>
+	<div class="container-fluid">
+	<h3>Follow my social media !</h3>
+	<a href="https://www.facebook.com/"><img align="center" src="https://i.pinimg.com/originals/ca/3b/f0/ca3bf05cfab74677e5b73b130bd30991.png" width="5%" height="10%"></a>
+	<a href="https://www.instagram.com/"><img align="center" src="https://cdn-icons-png.flaticon.com/512/1400/1400829.png" width="5%" height="10%"></a>
+	<a href="https://twitter.com/"><img align="center" src="https://i.pinimg.com/originals/5f/d0/53/5fd0537ef0cbf9efd48c975209f74a8c.png" width="5%" height="10%"></a>
+	<a href="https://www.tiktok.com/"><img align="center" src="https://seeklogo.com/images/T/tiktok-share-icon-black-logo-29FFD062A0-seeklogo.com.png" width="5%" height="10%" class="tiktok"></a>
+	</div>
+	</center>
+
+	<!-- References:
+	"Edit, pencil, ruler, Draw, writing, ui, Tools And Utensils icon." (n. d.). Shareicon.net. Retrieved from https://www.shareicon.net/edit-pencil-ruler-draw-writing-ui-tools-and-utensils-851203. 
+
+	Erespe, L. (n. d.). "Calculation, equal, equal sign icon." IconFinder. Retrieved from https://www.iconfinder.com/icons/1343011/calculation_equal_equal_sign_math_mathematics_orange_icon. 
+
+	"Sitemap." (n. d.). Calculator.net. Retrieved from https://www.calculator.net/sitemap.html. 
+	 -->
+
+</body>
+</html>
